@@ -21,6 +21,10 @@
 # lines, full and maguro, hence its name.
 #
 
+# Default Locale
+	ro.product.locale.language=ja \
+	ro.product.locale.region=JP
+
 # d2dcm ramdisk
 PRODUCT_COPY_FILES += \
     device/samsung/d2lte/rootdir/etc/sbin/felica_init.sh:root/sbin/felica_init.sh \

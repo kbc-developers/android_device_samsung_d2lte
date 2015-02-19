@@ -132,6 +132,14 @@ void vendor_load_properties()
         property_set("ro.config.libemoji", "libemoji_docomo.so");
         property_set("ro.telephony.default_network", "9");
         property_set("telephony.lteOnGsmDevice", "1");
+    } else if (strstr(bootloader, "SCL21")) {
+        /* d2kdi */
+        cdma_properties("0", "10", "44054", "KDDI", "1");
+        property_set("ro.build.fingerprint", "KDDI/SCL21/SCL21:4.1.2/JZO54K/SCL21KDBND1:user/release-keys");
+        property_set("ro.build.description", "d2kdi-user 4.1.2 JZO54K SCL21KDBND1 release-keys");
+        property_set("ro.product.model", "SCL21");
+        property_set("ro.product.device", "SCL21");
+        property_set("ro.com.google.clientidbase", "android-samsung");
     } else if (strstr(bootloader, "S968C")) {
         /* d2vzw - straighttalk */
         cdma_properties("1", "4", "310000", "TracFone", "0");

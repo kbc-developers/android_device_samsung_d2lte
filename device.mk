@@ -74,5 +74,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libnetcmdiface
 
+# Ramdisk
+PRODUCT_PACKAGES += \
+    felica_init.sh \
+    init.carrier.rc \
+    twrp.fstab
+
 # common msm8960
 $(call inherit-product, device/samsung/msm8960-common/msm8960.mk)

@@ -76,6 +76,15 @@ void vendor_load_properties()
         property_set("ro.build.description", "d2cri-user 4.4.2 KOT49H R530CVVUDNE4 release-keys");
         property_set("ro.product.model", "SCH-R530C");
         property_set("ro.product.device", "d2cri");
+    } else if (strstr(bootloader, "SC06D")) {
+        /* d2dcm */
+        gsm_properties();
+        property_set("ro.build.fingerprint", "samsung/d2om/d2dcm:4.1.2/JZO54K/SC06DOMBMK2:user/release-keys");
+        property_set("ro.build.description", "d2om-user 4.1.2 JZO54K SC06DOMBMK2 release-keys");
+        property_set("ro.product.model", "SC-06D");
+        property_set("ro.product.device", "d2dcm");
+        property_set("ro.ril.enable.dcm.feature", "1");
+        property_set("ro.config.libemoji", "libemoji_docomo.so");
     }  else if (strstr(bootloader, "R530M")) {
         /* d2mtr */
         cdma_properties("0", "8", "311660", "MetroPCS", "0");
@@ -118,20 +127,7 @@ void vendor_load_properties()
         property_set("ro.build.description", "d2vzw-user 4.4.2 KOT49H I535VRUDNE1 release-keys");
         property_set("ro.product.model", "SCH-I535");
         property_set("ro.product.device", "d2vzw");
-        property_set("ro.com.google.clientidbase", "android-verizon");
-    } else if (strstr(bootloader, "SC06D")) {
-        /* d2dcm */
-        gsm_properties();
-        property_set("ro.build.fingerprint", "samsung/d2om/d2dcm:4.1.2/JZO54K/SC06DOMBMK2:user/release-keys");
-        property_set("ro.build.description", "d2om-user 4.1.2 JZO54K SC06DOMBMK2 release-keys");
-        property_set("ro.product.model", "SC-06D");
-        property_set("ro.product.device", "d2dcm");
-        property_set("ro.ril.enable.dcm.feature", "1");
-        property_set("ro.product.locale.language", "ja");
-        property_set("ro.product.locale.region", "JP");
-        property_set("ro.config.libemoji", "libemoji_docomo.so");
-        property_set("ro.telephony.default_network", "9");
-        property_set("telephony.lteOnGsmDevice", "1");
+        property_set("ro.telephony.get_imsi_from_sim", "true");
     } else if (strstr(bootloader, "SCL21")) {
         /* d2kdi */
         cdma_properties("0", "10", "44054", "KDDI", "1");

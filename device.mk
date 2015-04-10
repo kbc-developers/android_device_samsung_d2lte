@@ -42,12 +42,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     gps.msm8960 \
     libgps.utils \
-    libloc_core \
+    libloc_adapter \
     libloc_eng
 
 PRODUCT_COPY_FILES += \
-    device/samsung/d2lte/gps/etc/gps.conf:system/etc/gps.conf \
-    device/samsung/d2lte/gps/etc/sap.conf:system/etc/sap.conf
+    device/samsung/d2lte/gps/gps.conf:system/etc/gps.conf
 
 # Keylayout
 PRODUCT_COPY_FILES += \

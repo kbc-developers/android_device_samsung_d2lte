@@ -55,7 +55,7 @@ TARGET_NEED_EXPOSURE_HACK := true
 TARGET_NEED_SAMSUNG_CAMERA_MODE := true
 
 # GPS
-BOARD_HAVE_NEW_QC_GPS := true
+TARGET_NO_RPC := true
 
 # RIL
 BOARD_RIL_CLASS := ../../../device/samsung/d2lte/ril

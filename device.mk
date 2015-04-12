@@ -15,7 +15,6 @@
 #
 
 ## Get non-open-source specific aspects if available
-$(call inherit-product-if-exists, vendor/samsung/d2dcm/d2dcm-vendor.mk)
 $(call inherit-product-if-exists, vendor/samsung/d2lte/d2lte-vendor.mk)
 
 ## overlays

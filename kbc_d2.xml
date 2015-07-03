@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote name="blastagator" fetch="https://github.com/blastagator/" />
+  <remote name="CyanogenMod" fetch="https://github.com/CyanogenMod/" />
+  <remote name="kbc-developers" fetch="https://github.com/kbc-developers/" />
+
+  <!-- F2FS tools & TWRP bootable --> 
+  <remove-project path="bootable/recovery" name="android_bootable_recovery" remote="omnirom" revision="android-4.4"/>
+  <project path="bootable/recovery" name="android_bootable_recovery" remote="omnirom" revision="android-5.1"/>
+  <remove-project name="android_external_e2fsprogs" />
+  <project name="android_external_e2fsprogs" path="external/e2fsprogs" remote="CyanogenMod" revision="cm-12.1" />
+  <remove-project name="android_external_f2fs-tools" />
+  <project name="cm_external_f2fs-tools" path="external/f2fs-tools" remote="blastagator" revision="cm-12.1" />
+
+  <!-- samsung common -->
+  <project name="android_hardware_samsung" path="hardware/samsung" remote="omnirom" revision="android-4.4" />
+  <remove-project path="hardware/qcom/power" name="android_hardware_qcom_power" remote="omnirom" revision="android-4.4" />
+  <project path="hardware/qcom/power" name="android_hardware_qcom_power" remote="CyanogenMod" revision="cm-11.0" />
+
+<!-- sc06d -->
+  <project name="kbc-developers/android_kernel_samsung_d2dcm" path="kernel/samsung/d2dcm" remote="github" revision="android-4.4" />
+  <project name="android_device_samsung_qcom-common" path="device/samsung/qcom-common" remote="kbc-developers" revision="cm-12.1" />
+  <project name="proprietary_vendor_samsung" path="vendor/samsung" remote="kbc-developers" revision="cm-12.1" />
+  <project name="android_device_samsung_msm8960-common" path="device/samsung/msm8960-common" remote="kbc-developers" revision="android-4.4" />
+  <project name="android_device_samsung_d2lte" path="device/samsung/d2lte" remote="kbc-developers" revision="android-4.4" />
+   
+
+</manifest>

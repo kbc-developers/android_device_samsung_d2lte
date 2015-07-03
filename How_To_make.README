@@ -1,0 +1,32 @@
+======================================================================
+==============================+ README +==============================
+======================================================================
+
+Welcome to KBC-developers tweaked SAMSUNG d2 device git.
+
+This git is based on the CM device tree. I tweaked it to build TWRP 
+recovery.
+
+To Build TWRP:
+
+1) Initialize the OmniROM repo.
+
+repo init -u git://github.com/omnirom/android.git -b android-4.4
+
+2) Sync the OmniROM repo.
+
+3) Copy the kbc_d2.xml 
+to your omni/.repo/local_manifests folder.
+
+4) Sync the OmniROM repo again.
+
+5) Make
+
+. build/envsetup.sh
+lunch full_d2lte-userdebug
+time make -j12 recoveryimage
+
+NOTE: Do not extract blobs or run setup-makefiles!  This is not 
+necessary because the vendor tree is repo sync'd automatically.
+
+This uses cm-11.0 kernel that I patched to enable f2fs.

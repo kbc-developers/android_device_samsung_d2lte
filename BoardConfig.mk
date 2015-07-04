@@ -101,4 +101,4 @@ TW_CRYPTO_FS_FLAGS := "0x00000406"
 TW_CRYPTO_KEY_LOC := "footer"
 
 # twrp.fstab
-PRODUCT_COPY_FILES += device/samsung/d2lte/rootdir/twrp.fstab:recovery/root/etc/twrp.fstab
+PRODUCT_COPY_FILES += device/samsung/d2lte/rootdir/etc/twrp.fstab:recovery/root/etc/twrp.fstab
